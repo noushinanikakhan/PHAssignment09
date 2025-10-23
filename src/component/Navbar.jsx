@@ -4,7 +4,9 @@ import skilLogo from "./../assets/Skill-Logo.png"
 
 const Navbar = () => {
     return (
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-base-100 shadow-sm w-11/12 mx-auto 
+      bg-primary">
+
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,7 +28,7 @@ const Navbar = () => {
     </div>
     <a className="flex items-center space-x-2">
         <img className="h-[60px] w-[60px]" src={skilLogo} alt="" />
-        <h1 className="font-bold text-2xl">SkillSwap</h1>
+        <h1 className="font-semibold text-2xl text-[#1e3a8a]">Skill<span className="font-bold">Swap</span></h1>
     </a>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -45,7 +47,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">LogIn</a>
+    <a className="btn bg-[#1e3a8a] text-white font-semibold">LogIn</a>
   </div>
 </div>
     )

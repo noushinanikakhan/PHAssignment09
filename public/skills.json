@@ -1,0 +1,110 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Beginner Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 25,
+    "rating": 4.8,
+    "slotsAvailable": 4,
+    "description": "Acoustic guitar classes for complete beginners focusing on basic chords, rhythm, and song playing.",
+    "image": "https://i.postimg.cc/1XyZK2WN/guitar-lessons.jpg",
+    "category": "Music"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Spoken English Practice",
+    "providerName": "Sara Hossain",
+    "providerEmail": "sara@skillswap.com",
+    "price": 15,
+    "rating": 4.6,
+    "slotsAvailable": 6,
+    "description": "Conversational English sessions to improve fluency, pronunciation, and confidence in communication.",
+    "image": "https://i.postimg.cc/Bvxrkrh0/spoken-english.jpg",
+    "category": "Language"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Basic Coding with JavaScript",
+    "providerName": "Rafiul Islam",
+    "providerEmail": "rafiul@skillswap.com",
+    "price": 30,
+    "rating": 4.9,
+    "slotsAvailable": 3,
+    "description": "Learn the fundamentals of web programming through hands-on JavaScript projects and exercises.",
+    "image": "https://i.postimg.cc/VLp3SLfC/javascript.jpg",
+    "category": "Technology"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Yoga for Beginners",
+    "providerName": "Priya Sharma",
+    "providerEmail": "priya@skillswap.com",
+    "price": 18,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Morning yoga sessions focusing on posture, breathing, and relaxation techniques for beginners.",
+    "image": "https://i.postimg.cc/Zn5t1G1W/yoga.jpg",
+    "category": "Health & Wellness"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Photography Basics",
+    "providerName": "Daniel Brooks",
+    "providerEmail": "daniel@skillswap.com",
+    "price": 22,
+    "rating": 4.5,
+    "slotsAvailable": 4,
+    "description": "Understand camera settings, composition, and lighting to take better photos with any camera.",
+    "image": "https://i.postimg.cc/TwYxZgkH/photography.jpg",
+    "category": "Art & Creativity"
+  },
+  {
+    "skillId": 6,
+    "skillName": "Cooking Healthy Meals",
+    "providerName": "Nadia Rahman",
+    "providerEmail": "nadia@skillswap.com",
+    "price": 20,
+    "rating": 4.6,
+    "slotsAvailable": 6,
+    "description": "Learn to cook delicious and healthy dishes with locally available ingredients and easy methods.",
+    "image": "https://i.postimg.cc/qBnFzYHq/cooking.jpg",
+    "category": "Lifestyle"
+  },
+  {
+    "skillId": 7,
+    "skillName": "Graphic Design Essentials",
+    "providerName": "Michael Torres",
+    "providerEmail": "michael@skillswap.com",
+    "price": 35,
+    "rating": 4.9,
+    "slotsAvailable": 3,
+    "description": "A beginner-friendly introduction to design principles and tools like Canva and Adobe Photoshop.",
+    "image": "https://i.postimg.cc/KjC07vCp/graphic-design.jpg",
+    "category": "Design"
+  },
+  {
+    "skillId": 8,
+    "skillName": "French Language for Travelers",
+    "providerName": "Elise Dubois",
+    "providerEmail": "elise@skillswap.com",
+    "price": 28,
+    "rating": 4.8,
+    "slotsAvailable": 4,
+    "description": "Learn essential French words and phrases for travel, greetings, and everyday interactions.",
+    "image": "https://i.postimg.cc/65LdGvPc/french-language.jpg",
+    "category": "Language"
+  },
+  {
+    "skillId": 9,
+    "skillName": "Digital Marketing Fundamentals",
+    "providerName": "Arman Khan",
+    "providerEmail": "arman@skillswap.com",
+    "price": 40,
+    "rating": 4.7,
+    "slotsAvailable": 3,
+    "description": "Hands-on introduction to SEO, social media strategies, and running effective online campaigns.",
+    "image": "https://i.postimg.cc/zGyF9WkB/digital-marketing.jpg",
+    "category": "Business & Marketing"
+  }
+]
