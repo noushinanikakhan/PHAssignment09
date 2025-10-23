@@ -8,7 +8,7 @@
     "rating": 4.8,
     "slotsAvailable": 4,
     "description": "Acoustic guitar classes for complete beginners focusing on basic chords, rhythm, and song playing.",
-    "image": "https://i.postimg.cc/1XyZK2WN/guitar-lessons.jpg",
+    "image": "https://images.unsplash.com/photo-1758521540790-db39a0abbdc8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332",
     "category": "Music"
   },
   {
@@ -20,7 +20,7 @@
     "rating": 4.6,
     "slotsAvailable": 6,
     "description": "Conversational English sessions to improve fluency, pronunciation, and confidence in communication.",
-    "image": "https://i.postimg.cc/Bvxrkrh0/spoken-english.jpg",
+    "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1122",
     "category": "Language"
   },
   {
@@ -32,7 +32,7 @@
     "rating": 4.9,
     "slotsAvailable": 3,
     "description": "Learn the fundamentals of web programming through hands-on JavaScript projects and exercises.",
-    "image": "https://i.postimg.cc/VLp3SLfC/javascript.jpg",
+    "image": "https://images.unsplash.com/photo-1502900476531-ca62d0f2b679?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
     "category": "Technology"
   },
   {
@@ -44,7 +44,7 @@
     "rating": 4.7,
     "slotsAvailable": 5,
     "description": "Morning yoga sessions focusing on posture, breathing, and relaxation techniques for beginners.",
-    "image": "https://i.postimg.cc/Zn5t1G1W/yoga.jpg",
+    "image": "https://images.unsplash.com/photo-1758599879065-46fd59235166?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332",
     "category": "Health & Wellness"
   },
   {
@@ -56,7 +56,7 @@
     "rating": 4.5,
     "slotsAvailable": 4,
     "description": "Understand camera settings, composition, and lighting to take better photos with any camera.",
-    "image": "https://i.postimg.cc/TwYxZgkH/photography.jpg",
+    "image": "https://images.unsplash.com/photo-1572959256450-672194225a5a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
     "category": "Art & Creativity"
   },
   {
@@ -68,7 +68,7 @@
     "rating": 4.6,
     "slotsAvailable": 6,
     "description": "Learn to cook delicious and healthy dishes with locally available ingredients and easy methods.",
-    "image": "https://i.postimg.cc/qBnFzYHq/cooking.jpg",
+    "image": "https://images.unsplash.com/photo-1758874961105-37e0cba8c9dd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332",
     "category": "Lifestyle"
   },
   {
@@ -80,7 +80,7 @@
     "rating": 4.9,
     "slotsAvailable": 3,
     "description": "A beginner-friendly introduction to design principles and tools like Canva and Adobe Photoshop.",
-    "image": "https://i.postimg.cc/KjC07vCp/graphic-design.jpg",
+    "image": "https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171",
     "category": "Design"
   },
   {
@@ -92,7 +92,7 @@
     "rating": 4.8,
     "slotsAvailable": 4,
     "description": "Learn essential French words and phrases for travel, greetings, and everyday interactions.",
-    "image": "https://i.postimg.cc/65LdGvPc/french-language.jpg",
+    "image": "https://images.unsplash.com/photo-1673937223884-7381eed0c8c1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1333",
     "category": "Language"
   },
   {
@@ -104,7 +104,7 @@
     "rating": 4.7,
     "slotsAvailable": 3,
     "description": "Hands-on introduction to SEO, social media strategies, and running effective online campaigns.",
-    "image": "https://i.postimg.cc/zGyF9WkB/digital-marketing.jpg",
+    "image": "https://images.unsplash.com/photo-1562577308-9e66f0c65ce5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074",
     "category": "Business & Marketing"
   }
 ]

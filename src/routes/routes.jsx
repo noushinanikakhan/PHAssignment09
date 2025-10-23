@@ -1,20 +1,40 @@
 import { createBrowserRouter } from "react-router";
 import HomeLayouts from "../layouts/HomeLayouts";
+import Home from "../pages/Home";
+import SkillDetails from "../pages/SkillDetails";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import MyProfile from "../pages/MyProfile";
 
 const router = createBrowserRouter(
     [
       {
         path: "/",
-        element: <HomeLayouts></HomeLayouts>
+        element: <HomeLayouts></HomeLayouts>,
+        children: [
+            {
+                path: "",
+                element: <Home></Home>
+            }
+
+        ]
       }, 
         {
-        path: "/auth",
-        element: <h2>Authentication</h2>,
+        path: "/login",
+        element: <Login></Login>,
+      }, 
+          {
+        path: "/register",
+        element: <Register></Register>,
       }, 
       {
         path: "/details",
-        element: <h2>description</h2>,
+        element: <SkillDetails></SkillDetails>,
       }, 
+      {
+             path: "/myprofile",
+        element: <MyProfile></MyProfile>,
+      },
       {
          path: "/*",
         element: <h2>Error-404</h2>, 

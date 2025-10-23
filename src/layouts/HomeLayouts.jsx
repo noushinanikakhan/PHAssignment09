@@ -6,6 +6,8 @@ import Footer from "../component/Footer";
 import TopRatedProviders from "../component/TopRatedProviders ";
 import HowItWorks from "../component/HowItWorks ";
 import StudentReviews from "../component/StudentReviews ";
+// import PopularSkills from "../component/PopularSkills";
+
 
 const HomeLayouts = () => {
     return (
@@ -16,7 +18,10 @@ const HomeLayouts = () => {
         </Header>
 
         <main>
-            <Outlet></Outlet>
+            <Outlet>
+              
+            </Outlet>
+            {/* <PopularSkills></PopularSkills> */}
             <TopRatedProviders></TopRatedProviders>
             <HowItWorks></HowItWorks>
             <StudentReviews></StudentReviews>
