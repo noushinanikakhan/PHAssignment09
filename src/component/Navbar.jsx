@@ -18,7 +18,7 @@ const Navbar = () => {
 });
   }
       return (
-      <div className="navbar bg-base-100 shadow-sm w-11/12 mx-auto 
+      <div className="navbar shadow-sm w-11/12 mx-auto 
       bg-primary text-[#1e3a8a]">
 
   <div className="navbar-start">
@@ -41,10 +41,19 @@ const Navbar = () => {
     </a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal px-1 font-medium">
       <li><Link to="/"> Home</Link></li>
      <li><Link to="/details">Our Courses</Link></li>
-      <li><Link to="/myprofile">My Profile</Link></li>
+      <li><Link to="/myprofile" className="relative group">
+            <img
+            src={user?.photoURL || "https://img.icons8.com/?size=100&id=u05i13Fgasru&format=gif&color=f7f7f7"}
+            alt={user?.displayName || "User"}
+            className="w-[20px] h-[20px] rounded-full  object-cover"
+          />
+           <span className="group-hover:hidden">My Profile</span>
+              <span className="hidden group-hover:inline">{user?.displayName}</span>
+
+         </Link></li>
     </ul>
   </div>
   <div className="navbar-end">

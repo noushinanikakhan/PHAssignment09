@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import { ToastContainer, toast } from 'react-toastify';
 
 const SkillDetails = () => {
   const [skills, setSkills] = useState([]);
+  const formRef = useRef(null)
 
   useEffect(() => {
     fetch("/skills.json")
@@ -12,7 +13,14 @@ const SkillDetails = () => {
       .then((data) => setSkills(data));
   }, []);
 
-    const notify = () => toast("Wow! You just booked a session!");
+    const notify = (e) => 
+ {
+         e.preventDefault();
+      toast("Wow! You just booked a session!");
+
+       // Clear form - use the form element
+    formRef.current.reset()
+ }
 
   
 
@@ -71,7 +79,7 @@ const SkillDetails = () => {
 
     </div>
     <div className="card bg-base-100 lg:w-[500px] max-w-lg shadow-2xl">
-      <div className="card-body">
+      <form ref={formRef} className="card-body">
         <fieldset className="fieldset ">
          <label className="label ">Name</label>    
                 <input type="name" className="input lg:w-[450px]" placeholder="Name" />
@@ -79,10 +87,10 @@ const SkillDetails = () => {
           <input type="email" className="input lg:w-[450px]" placeholder="Email" />
          
   
-          <button onClick={notify} className="btn  mt-4 bg-[#1e3a8a] text-white">Submit </button>
+          <button  type="button"  onClick={notify} className="btn  mt-4 bg-[#1e3a8a] text-white">Submit </button>
           <ToastContainer />
         </fieldset>
-      </div>
+      </form>
     </div>
   </div>
 </div> 

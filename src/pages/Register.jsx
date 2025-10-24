@@ -3,10 +3,13 @@ import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import { Link } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
+import { useNavigate } from "react-router";
 
 const Register = () => {
-  const {createUser, setUser} =useContext(AuthContext)
-  const [passwordError, setPasswordError]=useState("") 
+  const {createUser, setUser, updateUser} =useContext(AuthContext)
+  const [passwordError, setPasswordError]=useState("")
+  
+  const navigate = useNavigate()
 
   const handleRegister= (e)=>{
     
@@ -46,7 +49,15 @@ const Register = () => {
      .then ((result)=>{
       const user = result.user;
       // console.log(user)
-      setUser(user)
+      updateUser({displayName: name, photoURL: photo}).then(()=>{
+          setUser({...user, displayName: name, photoURL: photo})
+      })
+      navigate("/")
+      .catch((error)=> {
+        console.log(error);
+        setUser(user)
+      })
+  
      })
        .catch((error) => {
     const errorCode = error.code;
