@@ -48,7 +48,7 @@ const Navbar = () => {
             <img
             src={user?.photoURL || "https://img.icons8.com/?size=100&id=u05i13Fgasru&format=gif&color=f7f7f7"}
             alt={user?.displayName || "User"}
-            className="w-[20px] h-[20px] rounded-full  object-cover"
+            className="w-5 h-5 rounded-full  object-cover"
           />
            <span className="group-hover:hidden">My Profile</span>
               <span className="hidden group-hover:inline">{user?.displayName}</span>
