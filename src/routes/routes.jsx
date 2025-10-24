@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import MyProfile from "../pages/MyProfile";
 import Error from "../pages/Error";
+import PrivateRoute from "../provider/PrivateRoute";
 
 const router = createBrowserRouter(
     [
@@ -30,7 +31,9 @@ const router = createBrowserRouter(
       }, 
       {
         path: "/details",
-        element: <SkillDetails></SkillDetails>,
+        element: <PrivateRoute>
+          <SkillDetails></SkillDetails>
+          </PrivateRoute>,
       }, 
       {
              path: "/myprofile",
