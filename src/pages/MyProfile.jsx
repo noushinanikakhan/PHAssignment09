@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import { AuthContext } from "../provider/AuthProvider"; 
+import { Link } from "react-router";
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext); 
@@ -29,9 +30,11 @@ const MyProfile = () => {
             </h3>
             <p className="text-gray-600">{user?.email || "No Email"}</p>
 
-            <button className="mt-4 bg-[#1e3a8a] hover:bg-[#1d4ed8] text-white px-6 py-2 rounded-md transition">
+     <Link to="/updateprofile">
+            <button  className="mt-4 bg-[#1e3a8a] hover:bg-[#1d4ed8] text-white px-6 py-2 rounded-md transition">
               Update Profile
             </button>
+     </Link>
           </div>
         </div>
       </section>
