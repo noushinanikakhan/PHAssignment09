@@ -3,6 +3,11 @@ import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import { Link, useLocation, useNavigate } from "react-router"; // Fixed import
 import { AuthContext } from "../provider/AuthProvider";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+
+const auth = getAuth();
+const googleProvider = new GoogleAuthProvider()
+
 
 const Login = () => {
   const [error, setError] = useState("")
@@ -10,6 +15,24 @@ const Login = () => {
   const location = useLocation()
   const navigate = useNavigate();
   console.log(location)
+
+
+  const handleGoogleLogIn = () => {
+      signInWithPopup(auth, googleProvider)
+      .then((result)=> {
+        console.log(result)
+        const user= result.user;
+        setUser(user);
+        navigate("/")
+      })
+      .catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    })}
+
+
+
   const handleLogIn=(e)=>{
     e.preventDefault()
     const form =e.target;
@@ -54,7 +77,7 @@ const Login = () => {
                 {/* Google Button - Placed after login button and before sign-up link */}
                 <div className="flex flex-col items-center mt-4">
                   <div className="divider lg:w-[460px]">OR</div>
-                  <button className="btn btn-outline border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white lg:w-[460px]">
+                  <button onClick={handleGoogleLogIn} className="btn btn-outline border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white lg:w-[460px]">
                     Continue with Google
                   </button>
                 </div>

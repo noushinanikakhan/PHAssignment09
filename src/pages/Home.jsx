@@ -50,7 +50,7 @@ const Home = () => {
               {/* View Details Button */}
               <Link 
                 to={`/details/`} 
-                className="btn bg-[#1e3a8a] text-xl text-white font-semibold hover:bg-blue-800 transition-colors duration-300 lg:px-35"
+                className="btn bg-[#1e3a8a] text-2xl text-white font-semibold hover:bg-blue-800 transition-colors duration-300 lg:px-30"
               >
                 View Details
               </Link>

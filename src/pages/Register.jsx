@@ -4,14 +4,35 @@ import Footer from "../component/Footer";
 import { Link } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import { useNavigate } from "react-router";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth } from "firebase/auth";
+
+const auth = getAuth();
+const googleProvider = new GoogleAuthProvider()
 
 const Register = () => {
+
   const {createUser, setUser, updateUser} =useContext(AuthContext)
   const [passwordError, setPasswordError]=useState("")
   
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+   const handleGoogleSignIn = () => {
+    signInWithPopup(auth, googleProvider)
+    .then((result)=> {
+      console.log(result)
+      const user= result.user;
+      setUser(user);
+      navigate("/")
+    })
+    .catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  })}
 
   const handleRegister= (e)=>{
+
     
     e.preventDefault()
     const form= e.target;
@@ -99,7 +120,7 @@ const Register = () => {
                 {/* Google Button - Moved inside fieldset */}
                 <div className="flex flex-col items-center mt-4">
                   <div className="divider lg:w-[460px]">OR</div>
-                  <button className="btn btn-outline border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white lg:w-[460px]">
+                  <button onClick={handleGoogleSignIn} className="btn btn-outline border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white lg:w-[460px]">
                     Sign up with Google
                   </button>
                 </div>
