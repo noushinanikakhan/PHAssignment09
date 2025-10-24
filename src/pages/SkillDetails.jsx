@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
+import { ToastContainer, toast } from 'react-toastify';
 
 const SkillDetails = () => {
   const [skills, setSkills] = useState([]);
@@ -10,6 +11,10 @@ const SkillDetails = () => {
       .then((res) => res.json())
       .then((data) => setSkills(data));
   }, []);
+
+    const notify = () => toast("Wow! You just booked a session!");
+
+  
 
   return (
    <>
@@ -74,7 +79,8 @@ const SkillDetails = () => {
           <input type="email" className="input lg:w-[450px]" placeholder="Email" />
          
   
-          <button className="btn  mt-4 bg-[#1e3a8a] text-white">Submit </button>
+          <button onClick={notify} className="btn  mt-4 bg-[#1e3a8a] text-white">Submit </button>
+          <ToastContainer />
         </fieldset>
       </div>
     </div>
