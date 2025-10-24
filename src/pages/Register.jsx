@@ -4,6 +4,16 @@ import Footer from "../component/Footer";
 import { Link } from "react-router";
 
 const Register = () => {
+
+  const handleRegister= (e)=>{
+    e.preventDefault()
+    const form= e.target;
+    const name=form.name.value
+    const email=form.email.value
+    const photo=form.photo.value
+    const password=form.password.value
+    console.log(name)
+  }
   return (
     <>
       <Navbar></Navbar>
@@ -13,21 +23,21 @@ const Register = () => {
             <h1 className="text-2xl lg:text-5xl font-bold text-[#1e3a8a]">Register now!</h1>
           </div>
           <div className="card bg-base-100 lg:w-[600px] max-w-lg shrink-0 shadow-2xl">
-            <div className="card-body">
+            <form onSubmit={handleRegister} className="card-body">
               <fieldset className="fieldset">
                 <label className="label">Name</label>
-                <input type="text" className="input lg:w-[460px]" placeholder="Name" />
+                <input name="name" type="text" className="input lg:w-[460px]" placeholder="Name" required/>
 
                 <label className="label">Email</label>
-                <input type="email" className="input lg:w-[460px]" placeholder="Email" />
+                <input name="email" type="email" className="input lg:w-[460px]" placeholder="Email" required/>
 
                 <label className="label">Photo-URL</label>
-                <input type="text" className="input lg:w-[460px]" placeholder="Photo-URL" />
+                <input name="photo" type="text" className="input lg:w-[460px]" placeholder="Photo-URL" required/>
 
                 <label className="label">Password</label>
-                <input type="password" className="input lg:w-[460px]" placeholder="Password" />
+                <input name="password" type="password" className="input lg:w-[460px]" placeholder="Password" required/>
              
-                <button className="btn bg-[#1e3a8a] mt-4 text-white">Register</button>
+                <button type="submit" className="btn bg-[#1e3a8a] mt-4 text-white">Register</button>
                 <div className="lg:font-semibold text-center mt-2"> Already have an account?<Link to="/login"><span className="text-red-500 link link-hover ml-1">Login</span></Link></div>
 
                 {/* Google Button - Moved inside fieldset */}
@@ -38,7 +48,7 @@ const Register = () => {
                   </button>
                 </div>
               </fieldset>
-            </div>
+            </form>
           </div>
         </div>
       </div>

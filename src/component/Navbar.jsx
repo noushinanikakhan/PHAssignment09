@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import skilLogo from "./../assets/Skill-Logo.png"
 import { Link, Links } from "react-router";
+import { AuthContext } from "../provider/AuthProvider";
+import { use } from "react";
 
 
 const Navbar = () => {
-    return (
+
+  const {user}= use(AuthContext)
+      return (
       <div className="navbar bg-base-100 shadow-sm w-11/12 mx-auto 
       bg-primary text-[#1e3a8a]">
 
@@ -23,7 +27,8 @@ const Navbar = () => {
     </div>
     <a className="flex items-center space-x-2">
         <img className="h-[60px] w-[60px]" src={skilLogo} alt="" />
-        <h1 className="font-semibold text-2xl text-[#1e3a8a]">Skill<span className="font-bold">Swap</span></h1>
+        <h1 className="font-semibold text-2xl text-[#1e3a8a]">Skill<span className="font-bold">Swap</span>
+        {user && user.email}</h1>
     </a>
   </div>
   <div className="navbar-center hidden lg:flex">
