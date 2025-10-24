@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import { Link } from "react-router";
@@ -6,14 +6,41 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
   const {createUser, setUser} =useContext(AuthContext)
+  const [passwordError, setPasswordError]=useState("") 
 
   const handleRegister= (e)=>{
+    
     e.preventDefault()
     const form= e.target;
     const name=form.name.value
     const email=form.email.value
     const photo=form.photo.value
     const password=form.password.value
+  
+       // Password validation
+    if (password.length < 6) {
+      setPasswordError("Password must be at least 6 characters!")
+      return;
+    }
+    if (!/(?=.*[A-Z])/.test(password)) {
+      setPasswordError("Password must contain at least one uppercase letter!")
+      return;
+    }
+    if (!/(?=.*[a-z])/.test(password)) {
+      setPasswordError("Password must contain at least one lowercase letter!")
+      return;
+    }
+    
+    // Clear any previous errors
+    setPasswordError("") 
+
+
+
+
+
+
+
+
     console.log(name)
     createUser(email, password)
      .then ((result)=>{
@@ -50,6 +77,10 @@ const Register = () => {
 
                 <label className="label">Password</label>
                 <input name="password" type="password" className="input lg:w-[460px]" placeholder="Password" required/>
+
+                     
+                {/* Add error message display */}
+                {passwordError && <p className="text-red-500 text-sm mt-2">{passwordError}</p>}
              
                 <button type="submit" className="btn bg-[#1e3a8a] mt-4 text-white">Register</button>
                 <div className="lg:font-semibold text-center mt-2"> Already have an account?<Link to="/login"><span className="text-red-500 link link-hover ml-1">Login</span></Link></div>

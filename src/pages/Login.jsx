@@ -1,11 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
-import { Link } from "react-router"; // Fixed import
+import { Link, useLocation, useNavigate } from "react-router"; // Fixed import
 import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
+  const [error, setError] = useState("")
   const {signIn} = useContext(AuthContext)
+  const location = useLocation()
+  const navigate = useNavigate();
+  console.log(location)
   const handleLogIn=(e)=>{
     e.preventDefault()
     const form =e.target;
@@ -15,11 +19,13 @@ const Login = () => {
     signIn(email, password)
     .then((result)=> {
       const user = result.user;
+      navigate(`${location.state? location.state: "/"}`)
     })
      .catch((error) => {
     const errorCode = error.code;
-    const errorMessage = error.message;
-    alert (errorCode,errorMessage )
+    // const errorMessage = error.message;
+    // alert (errorCode,errorMessage )
+    setError(errorCode)
   });
   }
 
@@ -39,6 +45,10 @@ const Login = () => {
                 <label className="label">Password</label>
                 <input name="password" type="password" className="input lg:w-[460px]" placeholder="Password" required/>
                 <div><a className="link link-hover">Forgot password?</a></div>
+
+                {
+                  error &&  <p className="text-red-500">{error}</p>
+                }
                 <button type="submit" className="btn bg-[#1e3a8a] mt-4 text-white">Login</button>
 
                 {/* Google Button - Placed after login button and before sign-up link */}

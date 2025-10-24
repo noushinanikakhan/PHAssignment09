@@ -3,7 +3,7 @@ import app from "../firebase/firebase.config";
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
 import { signOut } from "firebase/auth";
-import { signInWithEmailAndPassword } from "firebase/auth/cordova";
+import { signInWithEmailAndPassword } from "firebase/auth"; // Correct
 
 
 
