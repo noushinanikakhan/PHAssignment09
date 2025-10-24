@@ -7,7 +7,16 @@ import { use } from "react";
 
 const Navbar = () => {
 
-  const {user}= use(AuthContext)
+  const {user, logOut}= use(AuthContext)
+    
+  const handleLogOut = ()=> {
+  console.log("triyng to out")
+  logOut().then(() => {
+  alert("Sign-out successful.")
+}).catch((error) => {
+ console.log(error)
+});
+  }
       return (
       <div className="navbar bg-base-100 shadow-sm w-11/12 mx-auto 
       bg-primary text-[#1e3a8a]">
@@ -39,7 +48,9 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link to="/login" className="btn bg-[#1e3a8a] text-white font-semibold">LogIn</Link>
+  {user ? (   <Link to="" onClick={handleLogOut} className="btn bg-[#1e3a8a] text-white font-semibold">LogOut</Link>): (   <Link to="/login" className="btn bg-[#1e3a8a] text-white font-semibold">LogIn</Link>)}
+
+ 
   </div>
 </div>
     )
