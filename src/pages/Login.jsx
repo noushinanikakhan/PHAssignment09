@@ -30,9 +30,9 @@ const Login = () => {
                   </button>
                 </div>
 
-                <div className="lg:font-semibold text-center mt-4">
+                <div className="lg:font-semibold text-center mt-2">
                   Don't have an account?  
-                  <Link to="/register"><span className="text-red-500 link link-hover">Sign-up</span></Link> 
+                  <Link to="/register"><span className="text-red-500 link link-hover ml-1">Sign-up</span></Link> 
                 </div>
               </fieldset>
             </div>

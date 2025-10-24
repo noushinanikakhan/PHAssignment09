@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
+import { Link } from "react-router";
 
 const Register = () => {
   return (
@@ -27,6 +28,7 @@ const Register = () => {
                 <input type="password" className="input lg:w-[460px]" placeholder="Password" />
              
                 <button className="btn bg-[#1e3a8a] mt-4 text-white">Register</button>
+                <div className="lg:font-semibold text-center mt-2"> Already have an account?<Link to="/login"><span className="text-red-500 link link-hover ml-1">Login</span></Link></div>
 
                 {/* Google Button - Moved inside fieldset */}
                 <div className="flex flex-col items-center mt-4">

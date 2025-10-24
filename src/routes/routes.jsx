@@ -5,6 +5,7 @@ import SkillDetails from "../pages/SkillDetails";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import MyProfile from "../pages/MyProfile";
+import Error from "../pages/Error";
 
 const router = createBrowserRouter(
     [
@@ -37,7 +38,7 @@ const router = createBrowserRouter(
       },
       {
          path: "/*",
-        element: <h2>Error-404</h2>, 
+        element: <Error></Error>, 
       }
     ]
 )
