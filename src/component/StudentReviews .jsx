@@ -18,7 +18,7 @@ const StudentReviews = () => {
             Rafiul Karim
           </h3>
           <p className="text-sm text-gray-500">Course: Basic Coding with JavaScript</p>
-          <p className="text-yellow-500 mt-1 font-medium">⭐ 4.9</p>
+          <p className="text-yellow-500 mt-1 font-medium">⭐⭐⭐⭐⭐  5</p>
         </div>
 
         {/* Review 2 */}
@@ -31,7 +31,7 @@ const StudentReviews = () => {
             Tamanna Rahman
           </h3>
           <p className="text-sm text-gray-500">Course: Yoga for Beginners</p>
-          <p className="text-yellow-500 mt-1 font-medium">⭐ 4.8</p>
+          <p className="text-yellow-500 mt-1 font-medium">⭐⭐⭐⭐⭐  5</p>
         </div>
 
         {/* Review 3 */}
@@ -44,7 +44,7 @@ const StudentReviews = () => {
             Ahsan Chowdhury
           </h3>
           <p className="text-sm text-gray-500">Course: Photography Basics</p>
-          <p className="text-yellow-500 mt-1 font-medium">⭐ 4.7</p>
+          <p className="text-yellow-500 mt-1 font-medium">⭐⭐⭐⭐⭐  5</p>
         </div>
 
         {/* Review 4 */}

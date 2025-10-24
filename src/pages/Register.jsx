@@ -8,7 +8,7 @@ const Register = () => {
   return (
    <>
     <Navbar></Navbar>
-  <div className="hero mx-auto bg-base-200 p-10  lg:h-[600px] ">
+  <div className="hero mx-auto w-11/12 bg-base-200 p-10  lg:h-[600px] ">
   <div className="hero-content flex-col  space-y-4">
     <div className="text-center lg:text-left">
       <h1 className="text-2xl  lg:text-5xl font-bold text-[#1e3a8a]">Register now!</h1>

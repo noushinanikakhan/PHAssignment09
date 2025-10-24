@@ -1,5 +1,6 @@
 import React from "react";
 import skilLogo from "./../assets/Skill-Logo.png"
+import { Link, Links } from "react-router";
 
 
 const Navbar = () => {
@@ -27,13 +28,13 @@ const Navbar = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
-     <li><a>Our Courses</a></li>
-      <li><a>My Profile</a></li>
+      <li><Link to="/"> Home</Link></li>
+     <li><Link to="/details">Our Courses</Link></li>
+      <li><Link to="/myprofile">My Profile</Link></li>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn bg-[#1e3a8a] text-white font-semibold">LogIn</a>
+    <Link to="/login" className="btn bg-[#1e3a8a] text-white font-semibold">LogIn</Link>
   </div>
 </div>
     )

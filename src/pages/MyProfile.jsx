@@ -18,12 +18,13 @@ const MyProfile = () => {
     <>
       <Navbar />
 
-      <section className="w-11/12 mx-auto my-12">
+      <section className="w-11/12 mx-auto p-10 bg-[#f8fafc]">
         <h2 className="text-3xl font-bold text-center mb-8 text-[#1e3a8a]">
           My Profile
         </h2>
 
-        <div className="flex flex-col md:flex-row items-center justify-center bg-white shadow-lg rounded-lg p-6 gap-8 max-w-3xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-center bg-white shadow-lg rounded-lg p-6 gap-8 max-w-xl 
+        h-[460px] mx-auto">
           <img
             src={user.photoURL}
             alt={user.displayName}

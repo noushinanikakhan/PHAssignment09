@@ -1,6 +1,6 @@
 import React from "react"
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router";
 
 const Home = () => {
  
@@ -47,19 +47,19 @@ const Home = () => {
                 Price: ${skill.price}
               </p>
 
-        
+              {/* View Details Button */}
+              <Link 
+                to={`/details/`} 
+                className="btn bg-[#1e3a8a] text-xl text-white font-semibold hover:bg-blue-800 transition-colors duration-300 lg:px-35"
+              >
+                View Details
+              </Link>
             </div>
           </div>
         ))}
       </div>
     </section>
-    // return (
-    //     <div>
-     
-    //     <h2>home</h2>
-    //     </div>
-        
-    )
+  )
 }
 
 export default Home;
