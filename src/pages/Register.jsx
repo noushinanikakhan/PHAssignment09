@@ -6,6 +6,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { useNavigate } from "react-router";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { getAuth } from "firebase/auth";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const auth = getAuth();
 const googleProvider = new GoogleAuthProvider()
@@ -14,6 +15,7 @@ const Register = () => {
 
   const {createUser, setUser, updateUser} =useContext(AuthContext)
   const [passwordError, setPasswordError]=useState("")
+  const [showPassword, setShowPassword] =useState(false)
   
   const navigate = useNavigate();
 
@@ -31,9 +33,7 @@ const Register = () => {
     const errorMessage = error.message;
   })}
 
-  const handleRegister= (e)=>{
-
-    
+  const handleRegister= (e)=>{ 
     e.preventDefault()
     const form= e.target;
     const name=form.name.value
@@ -57,12 +57,6 @@ const Register = () => {
     
     // Clear any previous errors
     setPasswordError("") 
-
-
-
-
-
-
 
 
     console.log(name)
@@ -107,8 +101,14 @@ const Register = () => {
                 <label className="label">Photo-URL</label>
                 <input name="photo" type="text" className="input lg:w-[460px]" placeholder="Photo-URL" required/>
 
-                <label className="label">Password</label>
-                <input name="password" type="password" className="input lg:w-[460px]" placeholder="Password" required/>
+            <div className="relative">
+                      <label className="label">Password</label>
+                <input name="password" type={showPassword ? 'text':'password'} className="input lg:w-[460px]" placeholder="Password" required/>
+                
+               <button onClick={()=> setShowPassword(!showPassword)}  className="btn btn-xs absolute top-6.5 right-4"> 
+                {showPassword? <FaEye></FaEye> : <FaEyeSlash /> }
+                </button>
+            </div>
 
                      
                 {/* Add error message display */}

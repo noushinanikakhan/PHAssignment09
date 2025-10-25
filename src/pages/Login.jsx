@@ -4,9 +4,11 @@ import Footer from "../component/Footer";
 import { Link, useLocation, useNavigate } from "react-router"; // Fixed import
 import { AuthContext } from "../provider/AuthProvider";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const auth = getAuth();
 const googleProvider = new GoogleAuthProvider()
+
 
 
 const Login = () => {
@@ -14,6 +16,7 @@ const Login = () => {
   const {signIn} = useContext(AuthContext)
   const location = useLocation()
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] =useState(false)
   console.log(location)
 
 
@@ -60,19 +63,26 @@ const Login = () => {
           <div className="text-center lg:text-left">
             <h1 className="text-2xl lg:text-5xl font-bold text-[#1e3a8a]">Login now!</h1>
           </div>
-          <div className="card bg-base-100 lg:w-[600px] max-w-lg shrink-0 shadow-2xl">
-            <form onSubmit={handleLogIn}  className="card-body">
-              <fieldset className="fieldset">
-                <label className="label">Email</label>
-                <input name="email" type="email" className="input lg:w-[460px]" placeholder="Email" required/>
+  <div className="card bg-base-100 lg:w-[600px] max-w-lg shrink-0 shadow-2xl">
+     <form onSubmit={handleLogIn}  className="card-body">
+      <fieldset className="fieldset">
+         <label className="label">Email</label>
+          <input name="email" type="email" className="input lg:w-[460px]" placeholder="Email" required/>
                 <label className="label">Password</label>
-                <input name="password" type="password" className="input lg:w-[460px]" placeholder="Password" required/>
-                <div><a className="link link-hover">Forgot password?</a></div>
+              
+       <div className="relative">
+          <label className="label">Password</label>
+          <input name="password" type={showPassword ? 'text':'password'} className="input lg:w-[460px]" placeholder="Password" required/>
 
-                {
-                  error &&  <p className="text-red-500">{error}</p>
-                }
-                <button type="submit" className="btn bg-[#1e3a8a] mt-4 text-white">Login</button>
+    <button onClick={()=> setShowPassword(!showPassword)}  className="btn btn-xs absolute top-6.5 right-4"> 
+ {showPassword? <FaEye></FaEye> : <FaEyeSlash /> }
+     </button>
+          </div>
+
+  <div><a className="link link-hover">Forgot password?</a></div>
+  {error &&  <p className="text-red-500">{error}</p>}
+
+          <button type="submit" className="btn bg-[#1e3a8a] mt-4 text-white">Login</button>
 
                 {/* Google Button - Placed after login button and before sign-up link */}
                 <div className="flex flex-col items-center mt-4">
