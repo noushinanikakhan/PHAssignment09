@@ -26,10 +26,10 @@ const Navbar = () => {
       </div>
       <ul
         tabIndex="0"
-        className="menu menu-sm dropdown-content bg-base-200 rounded-box z-50 mt-3 w-52 p-2 shadow text-blue-800">
-     <li className="text-blue-800"><Link to="/" className="text-blue-800"> Home</Link></li>
-     <li className="text-blue-800"><Link to="/details" className="text-blue-800">Our Courses</Link></li>
-      <li className="text-blue-800"><Link to="/myprofile" className="text-blue-800">
+        className="menu menu-sm dropdown-content bg-primary rounded-box z-50 mt-3 w-52 p-2 shadow text-[#1e3a8a]">
+     <li className="text-[#1e3a8a]"><Link to="/" className="text-[#1e3a8a]"> Home</Link></li>
+     <li className="text-[#1e3a8a]"><Link to="/details" className="text-[#1e3a8a]">Our Courses</Link></li>
+      <li className="text-[#1e3a8a]"><Link to="/myprofile" className="text-[#1e3a8a]">
            My Profile </Link></li>
       </ul>
     </div>
