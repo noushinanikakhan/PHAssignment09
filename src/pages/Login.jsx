@@ -10,7 +10,6 @@ const auth = getAuth();
 const googleProvider = new GoogleAuthProvider()
 
 
-
 const Login = () => {
   const [error, setError] = useState("")
   const {signIn} = useContext(AuthContext)
@@ -18,7 +17,8 @@ const Login = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] =useState(false)
   // console.log(location)
-  const emailRef = useRef()
+const [email, setEmail] = useState(""); 
+
 
 
   const handleGoogleLogIn = () => {
@@ -30,7 +30,6 @@ const Login = () => {
         navigate("/")
       })
       .catch((error) => {
-      // Handle Errors here.
       const errorCode = error.code;
       const errorMessage = error.message;
     })}
@@ -42,7 +41,7 @@ const Login = () => {
     const form =e.target;
     const email = form.email.value
     const password = form.password.value
-    // console.log(email, password)
+ 
     signIn(email, password)
     .then((result)=> {
       const user = result.user;
@@ -68,7 +67,12 @@ const Login = () => {
      <form onSubmit={handleLogIn}  className="card-body">
       <fieldset className="fieldset">
          <label className="label">Email</label>
-          <input name="email" type="email" className="input lg:w-[460px]" placeholder="Email" ref={emailRef} required/>
+          <input name="email" type="email" className="input lg:w-[460px]" placeholder="Email"
+          
+          
+       onChange={(e) => setEmail(e.target.value)}
+
+          required/>
                 <label className="label">Password</label>
               
        <div className="relative">
@@ -81,7 +85,7 @@ const Login = () => {
           </div>
 
   <div> <Link to="/forgetpassword" 
-         state={{ email: emailRef.current?.value }} 
+        state={{ email: email }} 
   className="link link-hover">Forgot password?</Link></div>
   {error &&  <p className="text-red-500">{error}</p>}
 

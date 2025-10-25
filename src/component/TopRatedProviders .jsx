@@ -3,7 +3,7 @@ import React from "react";
 const TopRatedProviders = () => {
   return (
     <section className="w-11/12 mx-auto my-10 bg-[#f8fafc] p-6 rounded-lg shadow">
-      <h2 className="text-3xl font-bold text-center mb-6 text-[#1e3a8a]">
+      <h2 className="text-2xl lg:text-3xl font-bold text-center mb-6 text-[#1e3a8a]">
          Top Rated Providers
       </h2>
 

@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <section className="w-11/12 mx-auto my-12">
-      <h2 className="text-4xl font-bold text-center mb-8 text-[#1e3a8a]">
+      <h2 className="text-2xl lg:text-4xl font-bold text-center mb-8 text-[#1e3a8a]">
          Popular Skills
       </h2>
 
@@ -48,7 +48,7 @@ const Home = () => {
 
               <Link 
                 to={`/details/`} 
-                className="btn bg-[#1e3a8a] text-2xl text-white font-semibold hover:bg-blue-800 transition-colors duration-300 lg:px-30"
+                className="btn bg-[#1e3a8a] text-xl lg:text-2xl text-white font-semibold hover:bg-blue-800 transition-colors duration-300 lg:px-30"
               >
                 View Details
               </Link>

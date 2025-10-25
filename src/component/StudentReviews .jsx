@@ -3,8 +3,8 @@ import React from "react";
 const StudentReviews = () => {
   return (
     <section className="w-11/12 mx-auto my-16 bg-[#f8fafc] p-8 rounded-lg shadow">
-      <h2 className="text-3xl font-bold text-center mb-10 text-[#1e3a8a]">
-        What Our Learners Say 🌟
+      <h2 className="text-2xl lg:text-3xl font-bold text-center mb-10 text-[#1e3a8a]">
+        What Our Learners Say 
       </h2>
 
       <div className="grid md:grid-cols-3 gap-6 text-gray-700">

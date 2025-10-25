@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
 import skilLogo from "./../assets/Skill-Logo.png"
-import { Link, Links } from "react-router";
+import { Link } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
-import { use } from "react";
-
 
 const Navbar = () => {
 
@@ -29,11 +27,10 @@ const Navbar = () => {
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><Link to="/"> Home</Link></li>
+     <li><Link to="/"> Home</Link></li>
      <li><Link to="/details">Our Courses</Link></li>
       <li><Link to="/myprofile" className="relative group">
-          My Profile
-         </Link></li>
+           My Profile </Link></li>
       </ul>
     </div>
     <a className="flex items-center space-x-1.5">
