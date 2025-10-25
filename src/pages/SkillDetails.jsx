@@ -28,16 +28,14 @@ const SkillDetails = () => {
   const notify = (e) => {
     e.preventDefault();
     
-    // Check if both fields are filled
+  
     if (!formData.name || !formData.email) {
       toast.error("Oops! Please fill all fields");
       return;
     }
     
-    // If both fields are filled, show success message
     toast.success("Wow! You just booked a session!");
-    
-    // Clear form
+ 
     setFormData({
       name: "",
       email: ""
@@ -75,10 +73,12 @@ const SkillDetails = () => {
                 {skill.description}
               </p>
 
-              <div className="flex justify-between text-gray-700 text-sm mt-3">
-                <p>💰 ${skill.price}</p>
-                <p>⭐ {skill.rating}</p>
-                <p>🎟️ {skill.slotsAvailable}</p>
+              <div className="flex justify-between text-gray-700 text-sm mt-3"> 
+
+               <button className="btn rounded-full  bg-primary " >Price: ${skill.price} </button> 
+                <button className="btn rounded-full  bg-primary " >Rating: {skill.rating}</button>
+                 <button className="btn rounded-full  bg-primary " >Slots Available: {skill.slotsAvailable}</button>
+  
               </div>
 
               <div className="bg-blue-50 p-3 rounded-md mt-3 text-center">

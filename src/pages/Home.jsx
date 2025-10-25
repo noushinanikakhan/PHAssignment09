@@ -10,7 +10,6 @@ const Home = () => {
     fetch("/skills.json")
       .then((res) => res.json())
       .then((data) => {
-        // Sort by rating (highest first) and take top 6
         const topSkills = data
           .sort((a, b) => b.rating - a.rating)
           .slice(0, 6);
@@ -47,7 +46,6 @@ const Home = () => {
                 Price: ${skill.price}
               </p>
 
-              {/* View Details Button */}
               <Link 
                 to={`/details/`} 
                 className="btn bg-[#1e3a8a] text-2xl text-white font-semibold hover:bg-blue-800 transition-colors duration-300 lg:px-30"

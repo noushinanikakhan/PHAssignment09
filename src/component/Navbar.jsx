@@ -37,7 +37,7 @@ const Navbar = () => {
       </ul>
     </div>
     <a className="flex items-center space-x-1.5">
-        <img className="h-[20px] w-[20px] lg:h-[60px] lg:w-[60px]" src={skilLogo} alt="" />
+        <img className="h-5 w-5 lg:h-[60px] lg:w-[60px]" src={skilLogo} alt="" />
         <h1 className="font-semibold text-xl lg:text-2xl text-[#1e3a8a]">Skill<span className="font-bold">Swap</span>
         {user && user.email}</h1>
     </a>
