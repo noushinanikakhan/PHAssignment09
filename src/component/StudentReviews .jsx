@@ -47,31 +47,6 @@ const StudentReviews = () => {
           <p className="text-yellow-500 mt-1 font-medium">⭐⭐⭐⭐⭐  5</p>
         </div>
 
-        {/* Review 4 */}
-        {/* <div className="bg-white p-6 rounded-lg shadow-md text-center transform transition-all duration-300 hover:scale-105 hover:bg-[#fde68a] hover:shadow-xl">
-          <p className="italic mb-4">
-            “Sara’s English classes improved my speaking confidence. I can now
-            express myself much better at work.”
-          </p>
-          <h3 className="font-semibold text-lg text-[#1e3a8a]">
-            Mehnaz Hossain
-          </h3>
-          <p className="text-sm text-gray-500">Course: Spoken English Practice</p>
-          <p className="text-yellow-500 mt-1 font-medium">⭐ 4.8</p>
-        </div> */}
-
-        {/* Review 5 */}
-        {/* <div className="bg-white p-6 rounded-lg shadow-md text-center transform transition-all duration-300 hover:scale-105 hover:bg-[#fecaca] hover:shadow-xl">
-          <p className="italic mb-4">
-            “The design sessions opened my creative side! The mentor gave great
-            feedback on my first digital poster.”
-          </p>
-          <h3 className="font-semibold text-lg text-[#1e3a8a]">
-            Hasan Ahmed
-          </h3>
-          <p className="text-sm text-gray-500">Course: Graphic Design Essentials</p>
-          <p className="text-yellow-500 mt-1 font-medium">⭐ 4.9</p>
-        </div> */}
       </div>
     </section>
   );

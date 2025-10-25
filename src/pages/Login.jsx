@@ -17,7 +17,7 @@ const Login = () => {
   const location = useLocation()
   const navigate = useNavigate();
   const [showPassword, setShowPassword] =useState(false)
-  console.log(location)
+  // console.log(location)
   const emailRef = useRef()
 
 
@@ -42,7 +42,7 @@ const Login = () => {
     const form =e.target;
     const email = form.email.value
     const password = form.password.value
-    console.log(email, password)
+    // console.log(email, password)
     signIn(email, password)
     .then((result)=> {
       const user = result.user;
@@ -87,7 +87,6 @@ const Login = () => {
 
      <button type="submit" className="btn bg-[#1e3a8a] mt-4 text-white">Login</button>
 
-      {/* Google Button - Placed after login button and before sign-up link */}
      <div className="flex flex-col items-center mt-4">
       <div className="divider lg:w-[460px]">OR</div>
 

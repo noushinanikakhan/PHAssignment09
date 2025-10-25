@@ -22,7 +22,7 @@ const Register = () => {
    const handleGoogleSignIn = () => {
     signInWithPopup(auth, googleProvider)
     .then((result)=> {
-      console.log(result)
+      // console.log(result)
       const user= result.user;
       setUser(user);
       navigate("/")
@@ -41,7 +41,7 @@ const Register = () => {
     const photo=form.photo.value
     const password=form.password.value
   
-       // Password validation
+   
     if (password.length < 6) {
       setPasswordError("Password must be at least 6 characters!")
       return;
@@ -55,11 +55,10 @@ const Register = () => {
       return;
     }
     
-    // Clear any previous errors
     setPasswordError("") 
 
 
-    console.log(name)
+    // console.log(name)
     createUser(email, password)
      .then ((result)=>{
       const user = result.user;
@@ -69,7 +68,7 @@ const Register = () => {
       })
       navigate("/")
       .catch((error)=> {
-        console.log(error);
+        // console.log(error);
         setUser(user)
       })
   
@@ -111,13 +110,12 @@ const Register = () => {
             </div>
 
                      
-                {/* Add error message display */}
+           
                 {passwordError && <p className="text-red-500 text-sm mt-2">{passwordError}</p>}
              
                 <button type="submit" className="btn bg-[#1e3a8a] mt-4 text-white">Register</button>
                 <div className="lg:font-semibold text-center mt-2"> Already have an account?<Link to="/login"><span className="text-red-500 link link-hover ml-1">Login</span></Link></div>
 
-                {/* Google Button - Moved inside fieldset */}
                 <div className="flex flex-col items-center mt-4">
                   <div className="divider lg:w-[460px]">OR</div>
                   <button onClick={handleGoogleSignIn} className="btn btn-outline border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white lg:w-[460px]">

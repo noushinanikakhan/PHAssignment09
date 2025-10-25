@@ -1,9 +1,9 @@
 import React from "react"
-import { Swiper, SwiperSlide } from "swiper/react";   // ✅ add this line
-import "swiper/css";                                 // ✅ core Swiper styles
-import "swiper/css/navigation";                      // ✅ navigation buttons
+import { Swiper, SwiperSlide } from "swiper/react";   
+import "swiper/css";                               
+import "swiper/css/navigation";                     
 import "swiper/css/pagination";     
-import { Autoplay, Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";  // ✅ modules
+import { Autoplay, Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules"; 
 
 import swiper1 from "./../assets/swiper-1.jpg"
 import swiper2 from "./../assets/swiper2.jpg"
@@ -72,11 +72,7 @@ const Header = () => {
     </div>
   </div>
         </SwiperSlide>
-        {/* <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide> */}
+     
       </Swiper>
 </section>
     )

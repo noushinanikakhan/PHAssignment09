@@ -32,7 +32,7 @@ setUser({...user, displayName: displayName, photoURL: photo })
 .catch((error) => {
   // An error occurred
   // ...
-  console.log(error)
+  // console.log(error)
 });
 }
 
@@ -51,12 +51,11 @@ setUser({...user, displayName: displayName, photoURL: photo })
         <fieldset 
       
           className="fieldset">
-             {/* name update */}
+      
           <label className="label">Name</label>
           <input name="name" type="text" className="input lg:w-[460px]" placeholder="Name" />
 
 
-          {/* photo update */}
           <label className="label">Photo-URL</label>
                 <input name="photo" type="text" className="input lg:w-[460px]" placeholder="Photo-URL"/>
 

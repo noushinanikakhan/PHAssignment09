@@ -14,7 +14,7 @@ const Navbar = () => {
   logOut().then(() => {
   alert("Sign-out successful.")
 }).catch((error) => {
- console.log(error)
+//  console.log(error)
 });
   }
       return (
@@ -39,7 +39,7 @@ const Navbar = () => {
     <a className="flex items-center space-x-1.5">
         <img className="h-5 w-5 lg:h-[60px] lg:w-[60px]" src={skilLogo} alt="" />
         <h1 className="font-semibold text-xl lg:text-2xl text-[#1e3a8a]">Skill<span className="font-bold">Swap</span>
-        {user && user.email}</h1>
+        </h1>
     </a>
   </div>
   <div className="navbar-center hidden lg:flex">
