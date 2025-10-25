@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
-import { Link, useLocation, useNavigate } from "react-router"; // Fixed import
+import { Link, Links, useLocation, useNavigate } from "react-router"; // Fixed import
 import { AuthContext } from "../provider/AuthProvider";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -18,6 +18,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] =useState(false)
   console.log(location)
+  const emailRef = useRef()
 
 
   const handleGoogleLogIn = () => {
@@ -67,7 +68,7 @@ const Login = () => {
      <form onSubmit={handleLogIn}  className="card-body">
       <fieldset className="fieldset">
          <label className="label">Email</label>
-          <input name="email" type="email" className="input lg:w-[460px]" placeholder="Email" required/>
+          <input name="email" type="email" className="input lg:w-[460px]" placeholder="Email" ref={emailRef} required/>
                 <label className="label">Password</label>
               
        <div className="relative">
@@ -79,15 +80,18 @@ const Login = () => {
      </button>
           </div>
 
-  <div><a className="link link-hover">Forgot password?</a></div>
+  <div> <Link to="/forgetpassword" 
+         state={{ email: emailRef.current?.value }} 
+  className="link link-hover">Forgot password?</Link></div>
   {error &&  <p className="text-red-500">{error}</p>}
 
-          <button type="submit" className="btn bg-[#1e3a8a] mt-4 text-white">Login</button>
+     <button type="submit" className="btn bg-[#1e3a8a] mt-4 text-white">Login</button>
 
-                {/* Google Button - Placed after login button and before sign-up link */}
-                <div className="flex flex-col items-center mt-4">
-                  <div className="divider lg:w-[460px]">OR</div>
-                  <button onClick={handleGoogleLogIn} className="btn btn-outline border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white lg:w-[460px]">
+      {/* Google Button - Placed after login button and before sign-up link */}
+     <div className="flex flex-col items-center mt-4">
+      <div className="divider lg:w-[460px]">OR</div>
+
+  <button onClick={handleGoogleLogIn} className="btn btn-outline border-[#1e3a8a] text-[#1e3a8a] hover:bg-[#1e3a8a] hover:text-white lg:w-[460px]">
                     Continue with Google
                   </button>
                 </div>
