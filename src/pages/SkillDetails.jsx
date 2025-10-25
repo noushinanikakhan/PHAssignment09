@@ -6,6 +6,10 @@ import { ToastContainer, toast } from 'react-toastify';
 const SkillDetails = () => {
   const [skills, setSkills] = useState([]);
   const formRef = useRef(null)
+  const [formData, setFormData] = useState({
+    name: "",
+    email: ""
+  });
 
   useEffect(() => {
     fetch("/skills.json")
@@ -13,16 +17,34 @@ const SkillDetails = () => {
       .then((data) => setSkills(data));
   }, []);
 
-    const notify = (e) => 
- {
-         e.preventDefault();
-      toast("Wow! You just booked a session!");
+     const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
 
-       // Clear form - use the form element
-    formRef.current.reset()
- }
+  const notify = (e) => {
+    e.preventDefault();
+    
+    // Check if both fields are filled
+    if (!formData.name || !formData.email) {
+      toast.error("Oops! Please fill all fields");
+      return;
+    }
+    
+    // If both fields are filled, show success message
+    toast.success("Wow! You just booked a session!");
+    
+    // Clear form
+    setFormData({
+      name: "",
+      email: ""
+    });
+    formRef.current.reset();
+  }
 
-  
 
   return (
    <>
@@ -82,9 +104,9 @@ const SkillDetails = () => {
       <form ref={formRef} className="card-body">
         <fieldset className="fieldset ">
          <label className="label ">Name</label>    
-                <input type="name" className="input lg:w-[450px]" placeholder="Name" />
+                <input type="name" className="input lg:w-[450px]" placeholder="Name" required/>
           <label className="label">Email</label>
-          <input type="email" className="input lg:w-[450px]" placeholder="Email" />
+          <input type="email" className="input lg:w-[450px]" placeholder="Email" required/>
          
   
           <button  type="button"  onClick={notify} className="btn  mt-4 bg-[#1e3a8a] text-white">Submit </button>

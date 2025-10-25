@@ -7,7 +7,7 @@ import { use } from "react";
 
 const Navbar = () => {
 
-  const {user, logOut}= use(AuthContext)
+  const {user, logOut}= useContext(AuthContext)
     
   const handleLogOut = ()=> {
   console.log("triyng to out")
@@ -29,14 +29,16 @@ const Navbar = () => {
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
-         <li><a>Our Courses</a></li>
-        <li><a>My Profile</a></li>
+        <li><Link to="/"> Home</Link></li>
+     <li><Link to="/details">Our Courses</Link></li>
+      <li><Link to="/myprofile" className="relative group">
+          My Profile
+         </Link></li>
       </ul>
     </div>
-    <a className="flex items-center space-x-2">
-        <img className="h-[60px] w-[60px]" src={skilLogo} alt="" />
-        <h1 className="font-semibold text-2xl text-[#1e3a8a]">Skill<span className="font-bold">Swap</span>
+    <a className="flex items-center space-x-1.5">
+        <img className="h-[20px] w-[20px] lg:h-[60px] lg:w-[60px]" src={skilLogo} alt="" />
+        <h1 className="font-semibold text-xl lg:text-2xl text-[#1e3a8a]">Skill<span className="font-bold">Swap</span>
         {user && user.email}</h1>
     </a>
   </div>
@@ -57,7 +59,17 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  {user ? (   <Link to="" onClick={handleLogOut} className="btn bg-[#1e3a8a] text-white font-semibold">LogOut</Link>): (   <Link to="/login" className="btn bg-[#1e3a8a] text-white font-semibold">LogIn</Link>)}
+
+  {user ? (   <Link to="" onClick={handleLogOut} className="btn bg-[#1e3a8a] text-white font-semibold">LogOut</Link>): 
+  <div className="flex gap-2">
+            <Link to="/register" className="btn btn-xs lg:btn-md rounded-full  bg-[#ffc6a3] text-red-600 font-semibold">
+              Sign-up
+            </Link>
+            <Link to="/login" className="btn btn-xs lg:btn-md rounded-full bg-[#1e3a8a] text-white font-semibold">
+              LogIn
+            </Link>
+          </div>
+  }
 
  
   </div>
