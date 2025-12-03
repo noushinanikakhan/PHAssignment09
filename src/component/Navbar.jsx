@@ -16,8 +16,8 @@ const Navbar = () => {
 });
   }
       return (
-      <div className="navbar shadow-sm w-11/12 mx-auto 
-      bg-primary text-[#1e3a8a] relative">
+      <div className="navbar shadow-sm w-full mx-auto 
+      bg-primary text-[#1e3a8a]  sticky top-0 z-50">
 
   <div className="navbar-start">
     <div className="dropdown dropdown-end">
@@ -28,9 +28,15 @@ const Navbar = () => {
         tabIndex="0"
         className="menu menu-sm dropdown-content bg-primary rounded-box z-50 mt-3 w-52 p-2 shadow text-[#1e3a8a]">
      <li className="text-[#1e3a8a]"><Link to="/" className="text-[#1e3a8a]"> Home</Link></li>
-     <li className="text-[#1e3a8a]"><Link to="/details" className="text-[#1e3a8a]">Our Courses</Link></li>
-      <li className="text-[#1e3a8a]"><Link to="/myprofile" className="text-[#1e3a8a]">
-           My Profile </Link></li>
+     <li className="text-[#1e3a8a]"><Link to="/allcourses" className="text-[#1e3a8a]">Our Courses</Link></li>
+      <li><Link to="/about">About Us</Link></li>
+      <li><Link to="/contact">Contact</Link></li>
+       {/* Conditionally show My Profile in mobile menu */}
+            {user && (
+              <li>
+                <Link to="/myprofile">My Profile</Link>
+              </li>
+            )}
       </ul>
     </div>
     <a className="flex items-center space-x-1.5">
@@ -42,17 +48,28 @@ const Navbar = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 font-medium">
       <li><Link to="/"> Home</Link></li>
-     <li><Link to="/details">Our Courses</Link></li>
-      <li><Link to="/myprofile" className="relative group">
-            <img
-            src={user?.photoURL || "https://img.icons8.com/?size=100&id=u05i13Fgasru&format=gif&color=f7f7f7"}
-            alt={user?.displayName || "User"}
-            className="w-5 h-5 rounded-full  object-cover"
-          />
-           <span className="group-hover:hidden">My Profile</span>
-              <span className="hidden group-hover:inline">{user?.displayName}</span>
-
-         </Link></li>
+     <li><Link to="/allcourses">Our Courses</Link></li>
+      <li><Link to="/about">About Us</Link></li>
+           <li><Link to="/contact">Contact</Link></li>
+         {/* Conditionally show My Profile in desktop menu */}
+          {user && (
+            <li>
+              <Link to="/myprofile" className="relative group">
+                <img
+                  src={
+                    user?.photoURL ||
+                    "https://img.icons8.com/?size=100&id=u05i13Fgasru&format=gif&color=f7f7f7"
+                  }
+                  alt={user?.displayName || "User"}
+                  className="w-5 h-5 rounded-full object-cover"
+                />
+                <span className="group-hover:hidden">My Profile</span>
+                <span className="hidden group-hover:inline">
+                  {user?.displayName}
+                </span>
+              </Link>
+            </li>
+          )}
     </ul>
   </div>
   <div className="navbar-end">

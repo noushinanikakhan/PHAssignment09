@@ -10,9 +10,9 @@ const Home = () => {
     fetch("/skills.json")
       .then((res) => res.json())
       .then((data) => {
-        const topSkills = data
+        const topSkills = [...data] 
           .sort((a, b) => b.rating - a.rating)
-          .slice(0, 6);
+          .slice(0, 4);
         setSkills(topSkills);
       });
   }, []);
@@ -23,7 +23,7 @@ const Home = () => {
          Popular Skills
       </h2>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {skills.map((skill) => (
           <div
             key={skill.skillId}
@@ -47,8 +47,8 @@ const Home = () => {
               </p>
 
               <Link 
-                to={`/details/`} 
-                className="btn bg-[#1e3a8a] text-xl lg:text-2xl text-white font-semibold hover:bg-blue-800 transition-colors duration-300 lg:px-30"
+                to={`/allcourses/`} 
+                className="btn bg-[#1e3a8a] text-xl lg:text-xl text-white font-semibold hover:bg-blue-800 transition-colors duration-300 lg:px-20"
               >
                 View Details
               </Link>

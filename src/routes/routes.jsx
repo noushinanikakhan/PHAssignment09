@@ -9,6 +9,10 @@ import Error from "../pages/Error";
 import PrivateRoute from "../provider/PrivateRoute";
 import UpdateProfile from "../pages/UpdateProfile";
 import ForgetPassword from "../pages/ForgetPassword";
+import SkillDescription from "../pages/SkillDescription";
+import About from "../pages/AboutUs";
+import Contact from "../pages/Contact";
+
 
 const router = createBrowserRouter(
     [
@@ -32,18 +36,35 @@ const router = createBrowserRouter(
         element: <Register></Register>,
       }, 
       {
+        path: "/allcourses",
+        element: <SkillDetails></SkillDetails>,
+      },
+         {
         path: "/details",
-        element: <PrivateRoute>
-          <SkillDetails></SkillDetails>
-          </PrivateRoute>,
-      }, 
+        element: 
+          <SkillDescription></SkillDescription>,
+      },
+        {
+          path: "/about",
+          element: <About></About>
+        },
+        {
+          path: "/contact",
+          element: <Contact></Contact>,
+        },
       {
              path: "/myprofile",
-        element: <MyProfile></MyProfile>,
+        element: <PrivateRoute>
+     <MyProfile></MyProfile>
+        </PrivateRoute>
+     
+      ,
       },
            {
              path: "/updateprofile",
-        element: <UpdateProfile></UpdateProfile>,
+        element: <PrivateRoute>
+                  <UpdateProfile></UpdateProfile>
+        </PrivateRoute>,
       },
                 {
              path: "/forgetpassword",
