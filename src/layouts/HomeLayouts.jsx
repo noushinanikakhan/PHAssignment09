@@ -6,6 +6,8 @@ import Footer from "../component/Footer";
 import TopRatedProviders from "../component/TopRatedProviders ";
 import HowItWorks from "../component/HowItWorks ";
 import StudentReviews from "../component/StudentReviews ";
+import PromotionalOffer from "../component/PromotionalOffer";
+import Newsletter from "../component/Newsletter";
 
 
 
@@ -26,8 +28,10 @@ const HomeLayouts = () => {
             </Outlet>
     
             <TopRatedProviders></TopRatedProviders>
+            <PromotionalOffer></PromotionalOffer>
             <HowItWorks></HowItWorks>
             <StudentReviews></StudentReviews>
+            <Newsletter></Newsletter>
         </main>
 
        <Footer></Footer>

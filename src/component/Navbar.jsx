@@ -31,6 +31,7 @@ const Navbar = () => {
      <li className="text-[#1e3a8a]"><Link to="/allcourses" className="text-[#1e3a8a]">Our Courses</Link></li>
       <li><Link to="/about">About Us</Link></li>
       <li><Link to="/contact">Contact</Link></li>
+       <li><Link to="/jobs">Join Us</Link></li>
        {/* Conditionally show My Profile in mobile menu */}
             {user && (
               <li>
@@ -51,6 +52,7 @@ const Navbar = () => {
      <li><Link to="/allcourses">Our Courses</Link></li>
       <li><Link to="/about">About Us</Link></li>
            <li><Link to="/contact">Contact</Link></li>
+                  <li><Link to="/jobs">Join Us</Link></li>
          {/* Conditionally show My Profile in desktop menu */}
           {user && (
             <li>

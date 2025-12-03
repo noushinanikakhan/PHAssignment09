@@ -12,6 +12,8 @@ import ForgetPassword from "../pages/ForgetPassword";
 import SkillDescription from "../pages/SkillDescription";
 import About from "../pages/AboutUs";
 import Contact from "../pages/Contact";
+import Job from "../pages/job";
+import PressKit from "../pages/PressKit";
 
 
 const router = createBrowserRouter(
@@ -40,7 +42,7 @@ const router = createBrowserRouter(
         element: <SkillDetails></SkillDetails>,
       },
          {
-        path: "/details",
+        path: "/details/:id",
         element: 
           <SkillDescription></SkillDescription>,
       },
@@ -52,6 +54,14 @@ const router = createBrowserRouter(
           path: "/contact",
           element: <Contact></Contact>,
         },
+           {
+             path: "/jobs",
+        element: <Job></Job>,
+      },
+              {
+             path: "/presskit",
+        element: <PressKit></PressKit>,
+      },
       {
              path: "/myprofile",
         element: <PrivateRoute>

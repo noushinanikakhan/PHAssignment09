@@ -46,8 +46,9 @@ const Home = () => {
                 Price: ${skill.price}
               </p>
 
+              {/* Updated to route to specific detail page */}
               <Link 
-                to={`/allcourses/`} 
+                to={`/details/${skill.skillId}`} 
                 className="btn bg-[#1e3a8a] text-xl lg:text-xl text-white font-semibold hover:bg-blue-800 transition-colors duration-300 lg:px-20"
               >
                 View Details
