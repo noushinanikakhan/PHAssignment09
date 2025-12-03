@@ -11,50 +11,50 @@ Whether you want to learn guitar, practice a new language, get help with coding,
 ## ✨ Key Features
 ### 🔐 Authentication & Security
 
-Secure Email/Password Authentication
+- Secure Email/Password Authentication
 
-Google Login for quick access
+- Google Login for quick access
 
-Strong Password Validation
+- Strong Password Validation
 
-Profile Management (name, photo, email)
+- Profile Management (name, photo, email)
 
-Protected Routes for authenticated users only
+- Protected Routes for authenticated users only
 
 ### 🎯 Skill Management
 
-Browse Popular Skills
+- Browse Popular Skills
 
-Rating-Based Sorting
+- Rating-Based Sorting
 
-Detailed skill descriptions
+- Detailed skill descriptions
 
-Diverse categories:
+- Diverse categories:
 Music, Coding, Yoga, Languages, Art & more
 
-Session Booking (with form validation)
+- Session Booking (with form validation)
 
 ### 🎨 User Experience
 
-Fully Responsive UI (mobile → desktop)
+- Fully Responsive UI (mobile → desktop)
 
-Smooth navigation with React Router
+- Smooth navigation with React Router
 
-Toast Notifications
+- Toast Notifications
 
-AOS animations & smooth transitions
+- AOS animations & smooth transitions
 
-Swiper.js — modern hero slider
+- Swiper.js — modern hero slider
 
 ### 🔒 Security & Performance
 
-Firebase Authentication
+- Firebase Authentication
 
-Environment variable protection
+- Environment variable protection
 
-Error handling for clean UX
+- Error handling for clean UX
 
-Fast performance with Vite
+- Fast performance with Vite
 
 ## 🛠️ Technology Stack
 ### Frontend
@@ -87,67 +87,67 @@ json
 ## 📦 NPM Packages Used
 ### Core Dependencies
 
-React
+- React
 
-React Router
+- React Router
 
-Firebase
+- Firebase
 
 ### Animation & Effects
 
-AOS (Animate On Scroll)
+- AOS (Animate On Scroll)
 
-Animate.css
+- Animate.css
 
-Swiper.js
+- Swiper.js
 
 ### UI & Notifications
 
-React Toastify
+- React Toastify
 
-Tailwind CSS
+- Tailwind CSS
 
-DaisyUI
+- DaisyUI
 
 ## 🎨 Animation Features
 ### AOS
 
-Scroll-triggered animations
+- Scroll-triggered animations
 
-Fade & zoom effects
+- Fade & zoom effects
 
-Smooth card animations
+- Smooth card animations
 
 ### Animate.css
 
-Button and card hover animations
+- Button and card hover animations
 
-CSS-driven transitions
+- CSS-driven transitions
 
 ### Swiper.js
 
-Auto-slide hero carousel
+- Auto-slide hero carousel
 
-Responsive images
+- Responsive images
 
-Touch-friendly navigation
+- Touch-friendly navigation
 
 ### React Toastify
 
-Success and error notifications
+- Success and error notifications
 
-Custom positions
+- Custom positions
 
-Clean mobile UI
+-  mobile UI
 
 ## 🚀 Getting Started
 ### Prerequisites
 
-Node.js 18+
+- Node.js 18+
 
-Firebase account
+- Firebase account
 
-Git installed
+- Git installed
 
 ## 1️⃣ Clone the Repository
 ```
@@ -203,57 +203,57 @@ firebase deploy
 
 ### Environment Configuration
 
-Enable Email/Password & Google login in Firebase
+- Enable Email/Password & Google login in Firebase
 
-Add environment variables for production
+- Add environment variables for production
 
 ## 🎯 Key Components
 ### Authentication Flow
 
-Login / Register
+- Login / Register
 
-Google OAuth
+- Google OAuth
 
-Protected pages
+- Protected pages
 
 ### Skill Management
 
-Skill listings
+- Skill listings
 
-Detailed skill pages
+- Detailed skill pages
 
-Booking form
+- Booking form
 
 ### User Interface
 
-Mobile-first design
+- Mobile-first design
 
-AOS animations
+- AOS animations
 
-Accessible components
+- Accessible components
 
 ## 🔧 Customization
 ### Add New Skill Categories
 
-Update skills.json
+- Update skills.json
 
-Add new UI cards
+- Add new UI cards
 
-Adjust filtering
+- Adjust filtering
 
 ### Add New Animations
 
-Modify AOS settings
+- Modify AOS settings
 
-Add Animate.css classes
+- Add Animate.css classes
 
 ### Feature Extensions
 
-Real-time messaging
+- Real-time messaging
 
-Payments
+- Payments
 
-Reviews & ratings system
+- Reviews & ratings system
 
 ### 🤝 Contributing
 
@@ -280,7 +280,7 @@ This project is licensed under the MIT License.
 ## 👥 Author
 
 Noushin Anika Khan
-GitHub: @noushinanikakhan
+GitHub: https://github.com/noushinanikakhan
 
 ## 🙏 Acknowledgments
 
